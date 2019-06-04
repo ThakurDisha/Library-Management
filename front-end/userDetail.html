@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="style.css">
+
+      <title>User Page</title>
+
+  </head>
+
+  <body id="userBody">
+
+    <!--Navigation bar-->
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="authorDetail.html">Author</a></li>
+      <li><a class="active">User</a></li>
+      <li><a href="bookDetail.html">Books</a></li>
+      <li><a href="loanDetail.html">Loan</a></li>
+    </ul>
+
+
+    <!--Main content of the page-->
+
+    <div id ="contentUser">
+      <div class="inner">
+        <br><table id="myTable">
+        </table>
+        <h3>Click on the Buttons Below to Toggle the Forms</h3>
+
+
+        <!--Dispaly User Details Toggle Button-->
+        <button id="toggleUserDetails" onclick="myFunction()">User Details</button>
+        <!--Dispaly User details-->
+        <form id="get">
+          <fieldset>
+            <legend>User Details</legend>
+            <input type="button" onclick="displayDetail()" value="Get all User details">
+          </fieldset>
+        </form>
+
+
+        <!--Delete User Toggle Button-->
+        <button id="toggleDeleteUser" onclick="myFunction5()">Delete User</button>
+        <!--Delete User By Id-->
+        <form id="deleteUserDetails">
+          <fieldset>
+            <legend>Delete User</legend>
+            <div class="row25"><label for="getUserId">Enter the UserID to delete:</label><br></div>
+            <div class="row75">
+              <input type="text" id="getUserId" placeholder="Enter User's ID.."><br>
+            </div>
+            <input type="button" value="Delete User" id="deleteUser">
+          </fieldset>
+        </form>
+
+
+        <!--Create User Toggle Button-->
+        <button id="toggleCreateUser" onclick="myFunction2()">Create New User</button>
+        <!-- Add new User form-->
+        <form id="createUser">
+          <fieldset>
+            <legend>Create a New User</legend>
+            <div class="row25"><label for="newUser">User Name:</label><br></div>
+            <div class="row75">
+              <input type="text" id="newUser" placeholder="Enter User Name.."><br>
+            </div>
+            <div class="row25"><label for="newUserBarcode">User Barcode:</label><br></div>
+            <div class="row75">
+              <input type="text" id="newUserBarcode" placeholder="Enter User Barcode.."><br>
+            </div>
+            <div class="row25"><label for="newUserType">User Type:</label><br></div>
+            <div class="row75">
+              <input type="text" id="newUserType" placeholder="Enter User Type.."><br>
+            </div>
+            <input type="button" value="Add user" id="addUser" onclick="displayDetail()">
+          </fieldset>
+        </form>
+
+
+        <!--Update User Toggle Button-->
+        <button id="toggleUpdateUser" onclick="myFunction3()">Update User</button>
+        <!--Update User list-->
+        <form id="updateUser">
+          <fieldset>
+            <legend>Update User Details</legend>
+            <div class="row25"><label for="renameUserID">User ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="renameUserID" placeholder="Enter User ID..">
+            </div>
+            <div class="row25"><label for="renameUser">User Name:</label><br></div>
+            <div class="row75">
+              <input type="text" id="renameUser" placeholder="Enter User Name..">
+            </div>
+            <div class="row25"><label for="re-enter_barcode">User Barcode:</label><br></div>
+            <div class="row75">
+              <input type="text" id="re-enter_barcode" placeholder="Enter User Barcode..">
+            </div>
+            <div class="row25"><label for="re-enter_membertype">User Type:</label><br></div>
+            <div class="row75">
+              <input type="text" id="re-enter_membertype" placeholder="Enter User Type.."><br>
+            </div>
+            <input type="button" value="Update User details" id="updateUserName" onclick="displayDetail()">
+          </fieldset>
+        </form>
+
+
+        <!--Search User Toggle Button-->
+        <button id="toggleSearchUser" onclick="myFunction4()">Search User</button>
+        <!--Search user-->
+        <form id="searchUser">
+          <fieldset>
+            <legend>Search User</legend>
+            <div class="row25"><label for="searchUserName">Search User's Name:</label><br></div>
+            <div class="row75"><input type="text" id="searchUserName" placeholder="Enter the User's Name to search.."></div>
+            <input type="button" onclick="searchDetailbyName()" value="Get user details"><br><br>
+            <div class="row25"><label for="searchUserBarcode">Search User's Barcode:</label><br></div>
+            <div class="row75"><input type="text" id="searchUserBarcode" placeholder="Enter the User's Barcode to search..">
+            </div>
+            <input type="button" onclick="searchDetailbyBarcode()" value="Get user details">
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+
+
+    <!--Linking the js file to html page-->
+    <script src="userDetail.js"></script>
+
+  </body>
+</html>

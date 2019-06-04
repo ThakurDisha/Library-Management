@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Loans Page</title>
+  </head>
+  <body id="loanBody">
+
+    <!--Navigation bar-->
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="authorDetail.html">Author</a></li>
+      <li><a href="userDetail.html">User</a></li>
+      <li><a href="bookDetail.html">Books</a></li>
+      <li><a class="active" href="#LoanPage">Loan</a></li>
+    </ul>
+
+    <div id="contentLoan">
+      <div class="inner">
+        <br><table id="myLoanTable">
+        </table>
+        <h3>Click on the Buttons Below to Toggle the Forms</h3>
+
+        <!--Get All Loan Toggle Button-->
+        <button id="toggleallLoanDetails" onclick="allLoanFunction()">All Loans</button>
+        <!--Get All loan details in the database-->
+        <form id="getallLoan">
+          <fieldset>
+            <legend>All Loans</legend>
+            <input type="button" onclick="displayLoanDetail()" value="Get all Loans">
+          </fieldset>
+        </form>
+
+
+        <!--Get Loan Toggle Button-->
+        <button id="toggleLoanDetails" onclick="myLoanFunction()">User's Loan Details</button>
+        <!--Get loan details for particular user-->
+        <form id="getLoan">
+          <fieldset>
+            <legend>Loan Details</legend>
+            <div class="row25"><label for="getuID">User ID:</label></div>
+            <div class="row75">
+              <input type="text" id="getuID" placeholder="Enter User ID">
+            </div>
+            <input type="button" onclick="searchLoanDetail()" value="Get User's Loan details">
+          </fieldset>
+        </form>
+
+
+        <!--Create Loan Toggle Button-->
+        <button id="toggleCreateLoan" onclick="myLoanFunction2()">Create Loan</button>
+        <!--Loan a book to user by specifying book id, user id and Due date-->
+        <form id="giveLoan">
+          <fieldset>
+            <legend>Loan A Book</legend><br><br>
+            <div class="row25"><label for="userid">User ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="userid" placeholder="Enter User ID.."><br>
+            </div>
+            <div class="row25"><label for="bookid">Book ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="bookid" placeholder="Enter Book ID.."><br>
+            </div>
+            <div class="row25"><label for="duedate">Due Date:</label><br></div>
+            <div class="row75">
+              <input type="text" id="duedate" placeholder="Enter Due Date(Y-M-D).."><br>
+            </div>
+            <input type="button" value="Add Loan" id="addloan" onclick="displayLoanDetail()">
+          </fieldset>
+        </form>
+
+
+        <!--Update Loan Toggle Button-->
+        <button id="toggleUpdateLoan" onclick="myLoanFunction3()">Update Loan</button>
+        <!--Update Loan Due Date by specifying Loan ID-->
+        <form id="putLoan">
+          <fieldset>
+            <legend>Update Due Date</legend><br><br>
+            <div class="row25"><label for="putLoanid">Loan ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="putLoanid" placeholder="Enter Loan ID.."><br>
+            </div>
+            <div class="row25"><label for="putduedate">Due Date:</label><br></div>
+            <div class="row75">
+              <input type="text" id="putduedate" placeholder="Enter Due Date(Y-M-D).."><br>
+            </div>
+            <input type="button" value="Update Loan" id="updateLoan" onclick="displayLoanDetail()">
+          </fieldset>
+        </form>
+
+
+        <!--Search Loan Toggle Button-->
+        <button id="toggleSearchLoan" onclick="myLoanFunction4()">Search Loan</button>
+        <!--Search User who has currently borrowed the book by entering book ID-->
+        <form id="searchLoan">
+          <fieldset>
+            <legend>Search Loan</legend>
+            <div class="row25"><label for="searchuserLoan">Book ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="searchuserLoan" placeholder="Enter the Book ID to search.." required/>
+              <br><br>
+            </div>
+            <input type="button" onclick="searchLoanbyid()" value="Get user Borrowing a book">
+          </fieldset>
+        </form>
+
+
+        <!--Delete Loan Toggle Button-->
+        <button id="toggleDeleteLoan" onclick="myLoanFunction5()">Delete Loan</button>
+        <!--Delete Loan by specifying Loan ID-->
+        <form id="deleteLoanDetails">
+          <fieldset>
+            <legend>Delete Loan</legend>
+            <div class="row25"><label for="getLoanId">Enter the Loan ID to delete:</label><br>
+            </div>
+            <div class="row75">
+              <input type="text" id="getLoanId" placeholder="Enter Loan ID.."><br>
+            </div>
+            <input type="button" value="Delete Loan" id="deleteLoan">
+          </fieldset>
+        </form>
+
+      </div>
+
+    </div>
+
+    <!--Linking the js file to html page-->
+    <script src="loanDetail.js"></script>
+    <!--Linking the moment.js file for formatting the dates-->
+    <script src="moment.js"></script>
+  </body>
+</html>

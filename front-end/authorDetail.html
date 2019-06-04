@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Author Page</title>
+  </head>
+  <body id=authorBody>
+
+    <!--Navigation Bar-->
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="authorDetail.html">Author</a></li>
+      <li><a href="userDetail.html">User</a></li>
+      <li><a href="bookDetail.html">Books</a></li>
+      <li><a href="loanDetail.html">Loan</a></li>
+    </ul>
+
+    <!--Main Content of the Page-->
+    <div id="authorcontent">
+      <div class="inner">
+        <br><table id="myAuthorTable">
+        </table>
+        <h3>Click on the Buttons Below to Toggle the Forms</h3>
+
+        <!--Display Author Details Toggle Button-->
+        <button id="toggleAuthorDetails" onclick="myAuthorFunction()">Author Details</button>
+        <!--Dispaly Author details-->
+        <form id="getAuthor">
+          <fieldset>
+            <legend>Author Details</legend>
+            <input type="button" onclick="displayAuthorDetail()" value="Get all Author details">
+          </fieldset>
+        </form>
+
+
+
+        <!--Create Author Toggle Button-->
+        <button id="toggleCreateAuthor" onclick="myAuthorFunction2()">Create Author</button>
+        <!--Add Author-->
+        <form id="createAuthor">
+          <fieldset>
+            <legend>Create Author</legend>
+            <!--Add Author Details-->
+            <div class="row25"><label for="newAuthor">Author Name:</label><br></div>
+            <div class="row75">
+              <input type="text" id="newAuthor" placeholder="Enter Author Name.."><br>
+            </div>
+            <div class="row25"><label for="newAuthorWebsite">Author Website:</label><br></div>
+            <div class="row75">
+              <input type="text" id="newAuthorWebsite" placeholder="Enter Author Website..">
+            </div>
+            <input type="button" value="Add author" id="addAuthor" onclick="displayAuthorDetail()">
+
+            <!--Add Author Book-->
+            <div class="row25"><label for="Author_ID">Author ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="Author_ID" placeholder="Enter Author ID who's Book is to be added..">
+            </div>
+            <div class="row25"><label for="newBook">Book Name:</label><br></div>
+            <div class="row75">
+              <input type="text" id="newBook" placeholder="Enter Book Name.."><br>
+            </div>
+            <div class="row25"><label for="bookIsbn">Book ISBN:</label><br></div>
+            <div class="row75">
+              <input type="text" id="bookIsbn" placeholder="Enter Book ISBN.."><br>
+            </div>
+            <div class="row25"><label for="bookquant">Book Quantity:</label><br></div>
+            <div class="row75">
+              <input type="text" id="bookquant" placeholder="Enter Book Quantity.."><br>
+            </div>
+            <input type="button" value="Add Book" id="addBook" onclick="displayAuthorDetail()">
+          </fieldset>
+        </form>
+
+
+
+        <!--Delete Author Toggle Button-->
+        <button id="toggleDeleteAuthor" onclick="deleteAuthorFunction()">Delete Author</button>
+        <!--Delete Author By Id-->
+        <form id="deleteAuthorDetails">
+          <fieldset>
+            <legend>Delete Author</legend>
+            <div class="row25"><label for="getAuthorId">Enter the AuthorID to delete:</label><br>
+            </div>
+            <div class="row75">
+              <input type="text" id="getAuthorId" placeholder="Enter Author's ID.."><br>
+            </div>
+            <input type="button" value="Delete Author" id="deleteAuthor">
+          </fieldset>
+        </form>
+
+
+
+        <!--Update Author Toggle Button-->
+        <button id="toggleUpdateAuthor" onclick="update_Author_detail()">Update Author </button>
+        <!--Update Author list-->
+        <form id="updateAuthor">
+          <fieldset>
+            <legend>Update Author Details</legend>
+            <div class="row25"><label for="renameAuthorID">Author ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="renameAuthorID" placeholder="Enter Author ID..">
+            </div>
+            <div class="row25"><label for="renameAuthor">Author Name:</label><br></div>
+            <div class="row75">
+              <input type="text" id="renameAuthor" placeholder="Enter Author Name..">
+            </div>
+            <div class="row25"><label for="re-enter_website">Author Website:</label><br></div>
+            <div class="row75">
+              <input type="text" id="re-enter_website" placeholder="Enter Author Website..">
+            </div>
+            <input type="button" value="Update Author details" id="update_author"
+            onclick="displayAuthorDetail()">
+          </fieldset>
+        </form>
+
+
+
+        <!--Search Author Toggle Button-->
+        <button id="toggleSearchAuthor" onclick="search_author_name()">Search Author</button>
+        <!--Search Author Details-->
+        <form id="searchAuthor">
+          <fieldset>
+            <legend>Search Author</legend>
+            <div class="row25"><label for="searchAuthorName">Search Author's Name:</label><br></div>
+            <div class="row75">
+              <input type="text" id="searchAuthorName" placeholder="Enter the Author's Name to search..">
+            </div>
+            <input type="button" onclick="searchDetailbyName()" value="Get Author details by Author's Name">
+            <br><br>
+            <div class="row25"><label for="searchbookbyBook_id">Search By Book's ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="searchbookbyBook_id" placeholder="Enter the Book's ID to search..">
+            </div>
+            <input type="button" onclick="searchBookbyBookID()" value="Get Author details">
+          </fieldset>
+        </form>
+
+      </div>
+
+    </div>
+
+    <!--Linking JavaScript file-->
+    <script src="authorDetail.js"></script>
+  </body>
+</html>

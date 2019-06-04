@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Page</title>
+  </head>
+  <body id="bookBody">
+
+
+    <!--Navigation bar-->
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="authorDetail.html">Author</a></li>
+      <li><a href="userDetail.html">User</a></li>
+      <li><a class="active" href="#Books">Books</a></li>
+      <li><a href="loanDetail.html">Loan</a></li>
+    </ul>
+
+    <!--Main Content of the Page-->
+    <div id="contentBook">
+      <div class="inner">
+        <br><table id="myBookTable"></table>
+        <h3>Click on the Buttons Below to Toggle the Forms</h3>
+
+
+        <!--Toggle Book Details Button-->
+        <button id="toggleBookDetails" onclick="myBookFunction()">Book Details
+        </button>
+        <!--Get Book Details-->
+        <form id="getBook">
+          <fieldset>
+            <legend>Book Details</legend>
+            <input type="button" onclick="displayBookDetail()"
+            value="Get all Book details">
+          </fieldset>
+        </form>
+
+
+        <!--Toggle Add Books Button-->
+        <button id="toggleAddBook" onclick="bookAdd()">Add Book</button>
+        <!--Add Book-->
+        <form id="Addb">
+          <fieldset>
+            <legend>Add New Book</legend><br>
+            <div class="row25"><label for="newBook">Book Title:</label><br></div>
+            <div class="row75">
+              <input type="text" id="newBook" placeholder="Enter Book Title.."><br>
+            </div>
+            <div class="row25"><label for="bookIsbn">Book ISBN:</label><br></div>
+            <div class="row75">
+              <input type="text" id="bookIsbn" placeholder="Enter Book ISBN.."><br>
+            </div>
+            <div class="row25"><label for="newBooknum">Book Quantity:</label><br></div>
+            <div class="row75">
+              <input type="text" id="newBooknum" placeholder="Enter Book Quantity.."><br>
+            </div>
+            <input type="button" value="Add Book" id="addBook" onclick="displayBookDetail()"><br>
+
+            <div class="row25"><label for="Book_ID">Book ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="Book_ID" placeholder="Enter Book ID who's Author is to be added..">
+            </div>
+            <div class="row25"><label for="bookAuthor">Author Name:</label><br></div>
+            <div class="row75">
+              <input type="text" id="bookAuthor" placeholder="Enter Book Author..">
+            </div>
+            <div class="row25"><label for="Authorwebsite">Author Website:</label></div>
+            <div class="row75">
+              <input type="text" id="Authorwebsite" placeholder="Enter Author Website..">
+            </div>
+            <input type="button" value="Add Author" id="addBookAuthor"
+            onclick="displayBookDetail()">
+          </fieldset>
+        </form>
+
+
+        <!--Toggle Update Books Button-->
+        <button id="toggleUpdateBook" onclick="updateBookdets()">Update Book</button>
+        <!--Update Book Details-->
+        <form id="updateBook">
+          <fieldset>
+            <legend>Update Book Details</legend>
+            <div class="row25"><label for="renameBookID">Book ID:</label><br></div>
+            <div class="row75">
+              <input type="text" id="renameBookID" placeholder="Enter Book ID..">
+            </div>
+            <div class="row25"><label for="renameUser">Book Title:</label><br></div>
+            <div class="row75">
+              <input type="text" id="renameUser" placeholder="Enter Book Title..">
+            </div>
+            <div class="row25"><label for="re-enter_isbn">Book ISBN:</label><br></div>
+            <div class="row75">
+              <input type="text" id="re-enter_isbn" placeholder="Enter Book's ISBN..">
+            </div>
+            <div class="row25"><label for="re-enter_quantity">Book Quantity:</label><br></div>
+            <div class="row75">
+              <input type="text" id="re-enter_quantity" placeholder="Enter Book's Quantity..">
+            </div>
+            <input type="button" value="Update Book details" id="updatebookDetail"
+            onclick="displayBookDetail()">
+          </fieldset>
+        </form>
+
+
+        <!--Toggle Search Books Button-->
+        <button id="toggleSearchBook" onclick="bookSearch()">Search Book
+        </button>
+        <!--Search Book-->
+        <form id="searchBook">
+          <fieldset>
+            <legend>Search Book</legend>
+            <div class="row25"><label for="searchBookTitle">Search by Book's Title:</label><br>
+            </div>
+            <div class="row75">
+              <input type="text" id="searchBookTitle" placeholder="Enter Book's Title to search.."><br><br>
+            </div>
+            <input type="button" onclick="searchBookbyTitle()" value="Search Book"><br><br>
+            <div class="row25">
+              <label for="searchbookbyAuthor_id">Search By Author's ID:</label><br>
+            </div>
+            <div class="row75">
+              <input type="text" id="searchbookbyAuthor_id" placeholder="Enter the Author's ID to search..">
+            </div>
+            <input type="button" onclick="searchBookbyauthorID()" value="Search Book by Author id">
+            <br>
+          </fieldset>
+        </form>
+
+
+        <!--Toggle Delete Books Button-->
+        <button id="toggleRemoveBook" onclick="bookRemove()">Remove Book</button>
+        <!--Delete Book By Id-->
+        <form id="removeBook">
+          <fieldset>
+            <legend>Remove Book</legend>
+            <div class="row25"><label for="getBookId">Enter Book ID to remove:</label><br>
+            </div>
+            <div class="row75">
+              <input type="text" id="getBookId" placeholder="Enter Book ID.."><br>
+            </div>
+            <input type="button" value="Remove Book" id="removeB"
+            onclick="displayBookDetail()">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <!--Linking JavaScript file-->
+    <script src="bookDetail.js"></script>
+
+  </body>
+</html>

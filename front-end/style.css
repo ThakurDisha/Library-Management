@@ -1,0 +1,334 @@
+
+body {
+  margin: 0;
+}
+
+/*Page Background Image Styling*/
+
+#authorBody{
+  background-image: url('Images/author1.jpg');
+  /*
+  licence:  Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0)
+  These are released under Creative Commons CC0.
+  Author: Fredrik Rubensson
+  Date: Taken on July 20, 2013
+  Title: diary writing
+  image_link: https://www.flickr.com/photos/froderik/9355090806
+  */
+}
+
+#bookBody{
+  background-image: url('Images/Library1.jpg');
+  /*
+  licence: Attribution 2.0 Generic (CC BY 2.0)
+  Author: Yazan Badran
+  Date: Taken on July 13, 2006
+  Title: Library
+  image_link:
+  https://www.flickr.com/photos/zozo2k3/189348897
+  */
+}
+
+#userBody{
+  background-image: url('Images/user1.jpg');
+  /*
+  licence: Attribution-NonCommercial-ShareAlike 2.0 Generic (CC BY-NC-SA 2.0)
+  Author: Linda Dougherty
+  Date: Taken in May 2011
+  Title: Marching Band Research Project
+  image_link: https://www.flickr.com/photos/ljdougherty/6154135065
+  */
+}
+
+#mainBody{
+  background-image:url('Images/loan1.jpg');
+  /*
+  licence: Attribution-NonCommercial 2.0 Generic (CC BY-NC 2.0)
+  Author: Ahson Wardak
+  Date: Uploaded on January 17, 2011
+  Title: Books That I Keep
+  image_link: https://www.flickr.com/photos/ahsonwardak/5364423851
+  */
+}
+
+
+#loanBody{
+  background-image: url('Images/LibraryCover.jpg');
+  /*
+  licence: Attribution 2.0 Generic (CC BY 2.0)
+  Description:	Library Photography Competition 2011 entry
+  Author: Rich Grundy
+  Date:	Taken on May 12, 2011
+  image_link:
+  https://www.flickr.com/photos/loughboroughuniversitylibrary/6333984637
+  */
+}
+
+#authorBody, #bookBody, #loanBody, #userBody{
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  background-position: top;
+}
+
+
+/*Navigation bar styling*/
+
+/*
+Adapted Navigation Bar styling from https://www.w3schools.com and
+made some changes in the sizing and style.
+link:
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidebar_responsive
+*/
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #4d4d4d;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.navbar li{
+  display: inline;
+  text-align: center;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.navbar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+/*Main content styling*/
+
+.inner{
+  background-color:white;
+  margin: 30px 150px;
+  height: 100vh;
+  position: relative;
+}
+
+h3{
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+div p{
+  font-style: normal;
+  text-align: center;
+  position: absolute;
+  font-size: 4em;
+  color: #ff00ff;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+/*Toggle form buttons*/
+
+#toggleButton, #toggleUserDetails, #toggleCreateUser, #toggleUpdateUser,
+#toggleSearchUser, #toggleDeleteUser, #toggleBookDetails,#toggleRemoveBook, #toggleAddBook,
+#toggleSearchBook, #toggleUpdateBook,#toggleAuthorDetails,#toggleCreateAuthor, #toggleDeleteAuthor,
+#toggleUpdateAuthor,#toggleSearchAuthor,#toggleLoanDetails, #toggleCreateLoan,
+#toggleUpdateLoan, #toggleSearchLoan, #toggleDeleteLoan, #toggleallLoanDetails{
+  margin:10px 10px;
+  display: inline-flex;
+  padding: 15px 8px;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+
+#get, #createUser, #updateUser, #searchUser, #deleteUserDetails, #getBook, #removeBook,#Addb,
+#searchBook,#updateBook, #getAuthor, #deleteAuthorDetails, #updateAuthor,#searchAuthor, #getLoan,
+#giveLoan, #putLoan, #searchLoan, #deleteLoanDetails, #createAuthor, #getallLoan{
+  display: none;
+
+}
+
+#content, #authorcontent, #contentUser, #contentBook, #contentLoan {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 100vh;
+}
+
+
+/*Form styling*/
+
+/* Adapted certain form styles(also made few own changes)
+from the below link to make it reponsive and present it nicely */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_responsive_form */
+
+input[type=text]{
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+
+input[type=button]{
+  width: 50vw;
+  display: block;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+
+form{
+  margin: 0 auto;
+}
+
+
+fieldset {
+  width: 5vw;
+  display: block;
+  align-items: center;
+  background-color:	#D3D3D3;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+legend{
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.row25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.row75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+
+
+/*Table Styling*/
+
+#myTable, #myBookTable, #myLoanTable, #myAuthorTable{
+  text-align: center;
+}
+
+table{
+  width: 40vw;
+  background-color: white;
+  border: 2px solid black;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+td, th{
+  border: 1px solid black;
+  padding: 5px;
+}
+
+
+
+/*Making the page responsive*/
+
+@media (max-width: 870px) {
+  .navbar {
+    width: 110vw;
+    height: auto;
+    position: relative;
+  }
+
+  .navbar a {
+    width: auto;
+    float: left;
+
+  }
+
+  #content, #authorcontent, #contentUser, #contentBook, #contentLoan{
+    width: 100vw;
+    margin-left: 0;
+  }
+  .inner{
+    margin: 15px;
+  }
+
+  form{
+    margin: 0 auto;
+  }
+
+  #toggleButton, #toggleUserDetails, #toggleCreateUser,
+  #toggleUpdateUser, #toggleSearchUser, #toggleDeleteUser, #toggleBookDetails,#toggleUpdateBook,
+  #toggleRemoveBook,#toggleAddBook,#toggleSearchBook, #toggleAuthorDetails,
+  #toggleDeleteAuthor, #toggleUpdateAuthor,#toggleSearchAuthor,#toggleCreateAuthor,
+  #toggleLoanDetails,#toggleCreateLoan,#toggleUpdateLoan, #toggleSearchLoan, #toggleLoanDetails,
+  #toggleCreateLoan,#toggleUpdateLoan, #toggleSearchLoan, #toggleDeleteLoan, #toggleallLoanDetails
+  {
+    margin:10px auto;
+    display: inline-flex;
+    align-items: center;
+  }
+  table{
+    width: 40vw;
+  }
+}
+
+/*Making th page responsive*/
+
+@media (max-width: 575px) {
+
+  .navbar{
+    width: 100vw;
+  }
+
+  .navbar a {
+    width: auto;
+    text-align: center;
+    float: none;
+  }
+
+  #toggleButton, #toggleUserDetails, #toggleCreateUser,
+  #toggleUpdateUser, #toggleSearchUser, #toggleDeleteUser, #toggleBookDetails,
+  #toggleRemoveBook, #toggleAddBook,#toggleSearchBook,#toggleUpdateBook,
+  #toggleAuthorDetails, #toggleUpdateAuthor,#toggleSearchAuthor,#toggleDeleteAuthor,
+  #toggleCreateAuthor,#toggleUpdateLoan, #toggleSearchLoan, #toggleLoanDetails,
+  #toggleCreateLoan,#toggleUpdateLoan, #toggleSearchLoan, #toggleDeleteLoan, #toggleallLoanDetails
+  {
+    margin: 1px 5px;
+    padding: 7px 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #content, #authorcontent, #contentUser, #contentBook, #contentLoan{
+    width: 100vw;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .inner{
+    margin: 10px;
+  }
+}
